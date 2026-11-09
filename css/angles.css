@@ -1,0 +1,86 @@
+/*Paleta de colores de google
+    Azul: #4285f4
+    Verde: #34a853
+    Amarillo: #fbbc05
+    Rojo: #ea4335
+*/
+h2{
+    text-align: center;
+}
+.col-sm ul p{
+    text-align: center;
+}
+
+.angulos{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.lado{
+    position: absolute;
+    top: 70%;
+    left: 100%;
+    width: 2px;
+    height: 100px;
+    
+    transform-origin: center top;
+    
+}
+.base{
+    position: absolute;
+    top: 70%;
+    left: 100%;
+    width: 2px;
+    height: 100px;
+    background-color: black;
+    transform-origin: center top;
+}
+
+#base_agudo{
+    transform: rotate(-90deg);
+}
+#lado_agudo{
+    background-color: #ea4335;
+    transform: rotate(-90deg);
+    animation: anguloAgudoAnimate 6s infinite;
+}
+#lado_recto{
+    transform: rotate(-180deg);
+    background-color: #fbbc05;
+}
+
+#lado_obtuso{
+    left: 100%;
+    transform: rotate(-180deg);
+    background-color: #34a853;
+    animation: anguloontusoAnimate 6s infinite;
+}
+#lado_llano{
+    transform: rotate(-270deg);
+    background-color: #b420d1;
+}
+@keyframes anguloAgudoAnimate{
+    0%{
+        transform: rotate(-90deg);
+    }
+
+    50%{
+        transform: rotate(-179.9deg); /*Angulo final*/
+    }
+
+    100%{
+        transform: rotate(-90deg); /*Angulo final*/
+    }
+}
+
+@keyframes anguloontusoAnimate {
+    0%{
+        transform: rotate(-180.1deg);
+    }
+    50%{
+        transform: rotate(-269.9deg);
+    }
+    100%{
+        transform: rotate(-180.1deg);
+    }
+}

@@ -1,0 +1,154 @@
+
+/*Paleta de colores de google
+    Azul: #4285f4
+    Verde: #34a853
+    Amarillo: #fbbc05
+    Rojo: #ea4335
+*/
+:root{
+    --width-a: 50%;
+    --width-b: 50%;
+    --width-c: 50%;
+
+    --width-iso-a: 20%;
+    --width-iso-b: 80%
+}
+
+@keyframes animacion_escaleno{
+    0%{
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+    }
+    50%{
+        clip-path: polygon(0% var(--width-b), var(--width-a) 100%, var(--width-c) 100%);
+        fill: #34a853;
+    }
+    100%{
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+    }
+        
+}
+
+#escaleno{
+    fill: #4285f4;
+    clip-path:  polygon(0% 0%, 0% 100%, 100% 100%);
+    animation-name: animacion_escaleno;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes animacion_isoceles{
+    0%{
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        fill: #ea4335;
+    }
+    50%{
+        clip-path: polygon(50% 0%, var(--width-iso-a) 100%, var(--width-iso-b) 100%);
+        fill: #4285f4;
+    }
+    100%{
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        fill: #ea4335;
+    }
+}
+
+#isoceles{
+    clip-path:  polygon(50% 0%, 0% 100%, 100% 100%);
+    animation-name: animacion_isoceles;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes animacion_equilatero{
+    0%{
+        fill: #34a853;
+        transform: scale(1);
+    }
+    50%{
+        fill: #fbbc05;
+        transform: scale(random());
+    }
+    100%{
+        fill: #34a853;
+        transform: scale(1);
+    }
+}
+
+#equilatero{
+    animation-name: animacion_equilatero;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+
+#acutangulo{
+    fill: #4285f4;
+    animation-name: animacion_acutangulo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+    z-index: 1;
+}
+@keyframes animacion_acutangulo {
+    0%{
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    20%{
+        clip-path: polygon(80% 0%, 0% 100%, 100% 100%);
+    }
+    40%{
+        clip-path: polygon(50% 0%, 0% 20%, 100% 100%);
+    }
+    60%{
+        clip-path: polygon(50% 0%, 0% 20%, 50% 100%);
+    }
+    80%{
+        clip-path: polygon(50% 0%, 0% 20%, 50% 50%);
+    }
+    100%{
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+}
+
+#rectangulo{
+    fill: #ea4335;
+    
+    
+    animation-name: animacion_rectangulo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+
+}
+
+@keyframes animacion_rectangulo {
+    
+    0%{
+        clip-path: polygon(50% 0%, 50% 100%, 100% 100%);
+    }
+    50%{
+        clip-path: polygon(50% 0%, 50% 100%, 100% 100%);
+    }
+    51%{
+
+        clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
+    }
+    100%{
+        clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
+    }
+    
+}
+
+#obtusangulo{
+    fill: #fbbc05;
+}
+
+.type_containers{
+    margin-top: 2rem;
+}
+.col-sm h2{
+    text-align: center;
+}
+
+
